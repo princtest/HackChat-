@@ -1,1 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>HackChat Clone</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <div id="app">
+    <header>
+      <h1 id="room-title">#lobby</h1>
+      <div id="meta">Anonymous chat — choose room & nick</div>
+    </header>
 
+    <main id="messages"></main>
+
+    <form id="msg-form">
+      <input id="msg-input" placeholder="Type message — /nick NEWNAME to change nick" autocomplete="off" />
+      <button type="submit">Send</button>
+    </form>
+
+    <div id="join-overlay" class="overlay">
+      <div class="card">
+        <h2>Join a room</h2>
+        <label>Room: <input id="room-input" value="lobby" /></label>
+        <label>Nick: <input id="nick-input" value="anon" /></label>
+        <div class="actions">
+          <button id="join-btn">Join</button>
+        </div>
+        <p class="muted">Rooms are public if someone knows the name. No accounts, no server logs (in this demo).</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="/chat.js"></script>
+</body>
+</html>
